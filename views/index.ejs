@@ -1,0 +1,13 @@
+<h2>Surveys</h2>
+<ul>
+<% surveys.forEach( function(survey) { %>
+  <li><a href="/respond/<%=survey._id%>"><%= survey.name %></a></li>
+<% }); %>
+</ul>
+
+<h2>Create a New Survey</h2>
+<form action="/survey" method="post">
+  <p><input type="text" placeholder="Name of survey" name="name" id="name" size="80"></p>
+  <p><input type="text" placeholder="Space separated list of survey choices" name="choices" id="choices" size="80"></p>
+  <p><input type="submit" value="Create Survey" class="button"></p>
+</form>
